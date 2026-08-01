@@ -1,7 +1,25 @@
 aid: praxispro-ai
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/praxispro-ai.png
 name: PraxisPro AI
-description: PraxisPro AI is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: PraxisPro AI is an AI-powered training platform built to modernize pharmaceutical and medical
+  device sales training for life sciences organizations. Its modules include PraxisPlay (AI roleplay
+  simulations with realistic healthcare-provider agents), PraxisCertify (certification tracking and
+  knowledge-gap identification), PraxisCoach (performance coaching and feedback), and PraxisIntelligence
+  (analytics and insights for management). The platform serves sales reps, trainers, managers, MSLs,
+  compliance, and marketing teams with personalized, AI-driven scenarios, immediate feedback, and
+  performance tracking. Backed by Techstars. Delivered as a SaaS product; no public developer API surface
+  is published at the time of enrichment.
 url: https://raw.githubusercontent.com/api-evangelist/praxispro-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,10 +28,23 @@ x-backed-by:
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Artificial Intelligence
+- Sales Training
+- Sales Enablement
+- Life Sciences
+- Pharmaceutical
+- Medical Devices
+- Roleplay Simulation
+- Learning and Development
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +54,21 @@ maintainers:
 common:
 - type: Website
   url: https://praxispro.ai/
+- type: Blog
+  url: https://www.praxispro.ai/blog
+- type: ChangeLog
+  name: Release Notes
+  url: changelog/praxispro-ai-changelog.yml
+- type: PrivacyPolicy
+  url: https://www.praxispro.ai/privacy-policy
+- type: Security
+  url: https://www.praxispro.ai/security
+- type: VulnerabilityDisclosure
+  url: security/praxispro-ai-vulnerability-disclosure.yml
+- type: Compliance
+  name: SOC 2 Type II
+  url: https://www.praxispro.ai/security
+- type: DomainSecurity
+  url: security/praxispro-ai-domain-security.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/praxispro-ai/

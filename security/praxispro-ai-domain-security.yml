@@ -1,0 +1,12 @@
+generated: '2026-07-20'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: praxispro.ai
+  https: false
+domains:
+- domain: praxispro.ai
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false

@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.praxispro.ai/releasenotes
+scheme: dated-release-notes
+current_version: null
+entries:
+- name: Call Focus
+  date: '2026-07-08'
+  breaking: false
+  highlights:
+  - Account specialists can select specific conversation topics (efficacy, safety, dosing) to practice in customized ride-along training.
+- name: Badge Center
+  date: '2026-07-01'
+  breaking: false
+  highlights:
+  - Gamification layer that turns ongoing performance into a visible, motivating badge system to sustain rep engagement across training weeks.
