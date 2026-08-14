@@ -29,12 +29,31 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 x-enrichment:
-  date: '2026-07-20'
-  status: enriched
-  artifacts_added: 3
+  date: '2026-08-14'
+  status: minimal
+  artifacts_added: 6
   pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    PraxisPro ships an enterprise life-sciences training SaaS with no developer program at all —
+    its own 20-URL sitemap has no docs, pricing or developer page, and the one host named
+    api.praxispro.ai is a CNAME to the third-party vendor api.rev.ai rather than a PraxisPro API.
+  evidence:
+  - url: https://www.praxispro.ai/sitemap.xml
+    status: 200
+  - url: https://www.praxispro.ai/docs
+    status: 404
+  - url: https://app.praxispro.ai/openapi.json
+    status: 404
+  - url: https://api.praxispro.ai/openapi.json
+    status: 404
+  - url: https://tm4ggh1m3b.execute-api.us-east-1.amazonaws.com/
+    status: 403
+  checked: '2026-08-14'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-08-14'
 tags:
 - Company
 - Artificial Intelligence
@@ -70,5 +89,25 @@ common:
   url: https://www.praxispro.ai/security
 - type: DomainSecurity
   url: security/praxispro-ai-domain-security.yml
+- type: Conformance
+  name: Standards and compliance conformance
+  url: conformance/praxispro-ai-conformance.yml
+- type: Lifecycle
+  name: Versioning, deprecation and status posture
+  url: lifecycle/praxispro-ai-lifecycle.yml
+- type: Plans
+  name: Pricing and packaging (none published)
+  url: plans/praxispro-ai-plans-pricing.yml
+- type: RateLimits
+  name: Rate limits (none published)
+  url: rate-limits/praxispro-ai-rate-limits.yml
+- type: LLMsTxt
+  url: llms/praxispro-ai-llms.txt
+- type: Support
+  name: Contact
+  url: https://www.praxispro.ai/contact-us
+- type: Login
+  name: Customer sign-in
+  url: https://app.praxispro.ai/login
 - type: LinkedIn
   url: https://www.linkedin.com/company/praxispro-ai/
