@@ -1,0 +1,26 @@
+generated: '2026-08-14'
+method: searched
+source: https://www.praxispro.ai/sitemap.xml
+plan_count: 0
+publishes_pricing: false
+model: enterprise-sales
+currency: null
+plans: []
+evidence:
+- url: https://www.praxispro.ai/pricing
+  status: 404
+- url: https://www.praxispro.ai/sitemap.xml
+  status: 200
+  detail: >-
+    Complete 20-URL sitemap contains no pricing, plans, or packaging page. The full public
+    surface is home, blog, release notes, contact-us, book-a-demo, careers, our-team,
+    privacy-policy, security, two release-note detail pages, four blog posts and two job posts.
+- url: https://www.praxispro.ai/book-a-demo
+  status: 200
+  detail: The only commercial call-to-action on the site is a demo request form.
+note: >-
+  PraxisPro AI publishes no plans, tiers, list prices, quotas or overage terms. The platform is
+  sold as an enterprise life-sciences SaaS engagement through a "Book a Demo" motion, so pricing
+  is established in a sales conversation and never stated publicly. This is a recorded zero, not
+  a gap in the search: the provider's own sitemap enumerates every public page and none of them
+  is a pricing page. No Pricing pointer is emitted, because no pricing page exists to point at.

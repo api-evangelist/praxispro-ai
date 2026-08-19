@@ -1,0 +1,90 @@
+generated: '2026-08-14'
+method: searched
+source: https://www.praxispro.ai/security
+note: >-
+  PraxisPro publishes exactly one named, verifiable assurance claim — SOC 2 Type II — on its
+  security page. Every other standard below was checked and is recorded as not conformant or not
+  claimed. No API-level standards (OAuth 2.0, OIDC, RFC 9457, pagination, idempotency) can be
+  assessed because the company publishes no machine-readable contract and no public API reference.
+standards:
+- id: soc2-type-ii
+  name: SOC 2 Type II
+  conforms: true
+  evidence:
+    url: https://www.praxispro.ai/security
+    quote: >-
+      "We are a SOC 2 Type II-certified organization. This certification demonstrates our
+      commitment to the highest operational excellence and data security standards."
+    kind: vendor-published claim on the company's own security page
+    report_available: false
+    auditor_named: false
+- id: encryption-in-transit-at-rest
+  name: Encryption in transit and at rest
+  conforms: true
+  evidence:
+    url: https://www.praxispro.ai/security
+    quote: >-
+      "We encrypt your data in-transit and at-rest using advanced cryptographic algorithms."
+    kind: vendor-published claim; no cipher suites, key management or TLS versions stated
+- id: iso-27001
+  name: ISO/IEC 27001
+  conforms: false
+  evidence:
+    detail: Not claimed anywhere on the public site.
+- id: hipaa
+  name: HIPAA
+  conforms: false
+  evidence:
+    detail: >-
+      Not claimed, despite the platform serving pharmaceutical and medical-device commercial
+      teams. PraxisPro trains sales representatives against synthetic healthcare-provider
+      personas rather than handling patient records, so a HIPAA posture may genuinely not apply.
+- id: gdpr
+  name: GDPR
+  conforms: false
+  evidence:
+    detail: >-
+      Not asserted on the security page. A privacy policy is published at
+      https://www.praxispro.ai/privacy-policy but makes no explicit GDPR conformance statement
+      on the security surface.
+- id: fedramp
+  name: FedRAMP
+  conforms: false
+  evidence:
+    detail: Not claimed.
+- id: pci-dss
+  name: PCI DSS
+  conforms: false
+  evidence:
+    detail: Not claimed; not a payments provider.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence:
+    detail: >-
+      Not assessable. The customer app authenticates against AWS Cognito, but no public
+      authorization server metadata is served and no developer OAuth flow is documented.
+- id: rfc9457
+  name: RFC 9457 Problem Details for HTTP APIs
+  conforms: false
+  evidence:
+    detail: Not assessable — no public API contract or error reference is published.
+- id: rfc9116
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence:
+    url: https://www.praxispro.ai/.well-known/security.txt
+    status: 404
+    detail: >-
+      A responsible-disclosure policy and security@praxispro.ai contact are published as HTML,
+      but not in the machine-readable RFC 9116 form.
+- id: rfc8594
+  name: RFC 8594 Sunset header
+  conforms: false
+  evidence:
+    detail: Not assessable — no public API surface.
+summary:
+  claimed: 2
+  not_claimed: 9
+  certifications_named:
+  - SOC 2 Type II

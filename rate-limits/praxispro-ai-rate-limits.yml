@@ -1,0 +1,22 @@
+generated: '2026-08-14'
+method: searched
+source: https://www.praxispro.ai/sitemap.xml
+limit_count: 0
+limits: []
+headers: []
+status_code_on_exhaustion: null
+evidence:
+- url: https://www.praxispro.ai/sitemap.xml
+  status: 200
+  detail: No developer documentation, API reference or usage-policy page exists to publish limits in.
+- url: https://tm4ggh1m3b.execute-api.us-east-1.amazonaws.com/
+  status: 403
+  detail: >-
+    The only PraxisPro API surface reachable from the public internet is the private AWS API
+    Gateway backing the customer SPA. It answers 403 Forbidden anonymously and emits no
+    RateLimit-*, X-RateLimit-* or Retry-After headers on that response.
+note: >-
+  No rate limits are documented, because no public API is documented. PraxisPro publishes no
+  developer portal, reference or usage policy, so there is no stated quota, window, burst or
+  throttle behavior to record, and no runtime rate-limit signal was observed on any anonymous
+  response. Honest zero.

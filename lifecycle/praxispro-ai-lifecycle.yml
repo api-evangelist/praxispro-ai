@@ -1,0 +1,56 @@
+generated: '2026-08-14'
+method: searched
+source: https://www.praxispro.ai/releasenotes
+note: >-
+  PraxisPro's only published lifecycle signal is a dated product release-notes feed. There is no
+  API versioning policy, no deprecation or sunset policy, no status page and no published SLA —
+  each was searched for and is recorded as absent below. No StatusPage and no Deprecation pointer
+  is emitted, because neither surface exists.
+versioning:
+  policy_published: false
+  scheme: product-release-notes
+  api_versioning: null
+  detail: >-
+    Product changes ship as named, dated release notes (feature names, not version numbers).
+    No API version scheme exists because no public API is published.
+release_notes:
+  published: true
+  url: https://www.praxispro.ai/releasenotes
+  status: 200
+  cadence: irregular
+  entries_published: 2
+  most_recent: '2026-07-08'
+  detail: See changelog/praxispro-ai-changelog.yml for the structured entries.
+deprecation:
+  policy_published: false
+  sunset_header: false
+  deprecation_header: false
+  rfc8594: false
+  evidence:
+    detail: >-
+      No deprecation, sunset, end-of-life or breaking-change policy appears anywhere in the
+      provider's 20-URL sitemap.
+status_page:
+  published: false
+  url: null
+  evidence:
+  - url: https://www.praxispro.ai/status
+    status: 404
+  - url: https://status.praxispro.ai
+    status: NXDOMAIN
+    detail: No DNS record exists for a status subdomain.
+sla:
+  published: false
+  uptime_target: null
+  detail: No service-level agreement, uptime commitment or support-response target is published.
+support:
+  contact_page: https://www.praxispro.ai/contact-us
+  security_contact: security@praxispro.ai
+deprecated_operations: []
+evidence:
+- url: https://www.praxispro.ai/releasenotes
+  status: 200
+- url: https://www.praxispro.ai/status
+  status: 404
+- url: https://www.praxispro.ai/sitemap.xml
+  status: 200

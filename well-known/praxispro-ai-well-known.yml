@@ -1,0 +1,86 @@
+generated: '2026-08-14'
+method: probed
+source: live HTTP probes of every PraxisPro-controlled host
+note: >-
+  Recorded absence. No PraxisPro host serves a real /.well-known/ document. The apex
+  praxispro.ai fails TLS negotiation outright; www.praxispro.ai (a Framer-hosted
+  marketing site) returns a hard 404 on every path; app.praxispro.ai and
+  admin.praxispro.ai are React single-page apps whose catch-all route answers HTTP 200
+  with the same 850-byte index.html shell for several /.well-known/ paths. Those 200s
+  are NOT documents and are recorded as misses. No WellKnown and no SecurityTxt pointer
+  is emitted for this provider.
+hosts:
+- host: https://www.praxispro.ai
+  kind: marketing site (Framer)
+- host: https://app.praxispro.ai
+  kind: customer web app (React SPA, AWS CloudFront)
+- host: https://api.praxispro.ai
+  kind: third-party vendor CNAME to api.rev.ai — NOT a PraxisPro API surface
+documents:
+- host: https://www.praxispro.ai
+  path: /.well-known/security.txt
+  status: 404
+- host: https://www.praxispro.ai
+  path: /.well-known/openid-configuration
+  status: 404
+- host: https://www.praxispro.ai
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: https://www.praxispro.ai
+  path: /.well-known/api-catalog
+  status: 404
+- host: https://www.praxispro.ai
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: https://www.praxispro.ai
+  path: /.well-known/agent-card.json
+  status: 404
+- host: https://www.praxispro.ai
+  path: /.well-known/agent.json
+  status: 404
+- host: https://app.praxispro.ai
+  path: /.well-known/security.txt
+  status: 404
+- host: https://app.praxispro.ai
+  path: /.well-known/openid-configuration
+  status: 200
+  result: miss
+  content_type: text/html
+  detail: SPA catch-all returned the app index.html shell, not an OIDC discovery document.
+- host: https://app.praxispro.ai
+  path: /.well-known/oauth-authorization-server
+  status: 200
+  result: miss
+  content_type: text/html
+  detail: SPA catch-all returned the app index.html shell, not an RFC 8414 document.
+- host: https://app.praxispro.ai
+  path: /.well-known/api-catalog
+  status: 200
+  result: miss
+  content_type: text/html
+  detail: SPA catch-all returned the app index.html shell, not an RFC 9727 catalog.
+- host: https://app.praxispro.ai
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: https://app.praxispro.ai
+  path: /.well-known/agent-card.json
+  status: 404
+- host: https://app.praxispro.ai
+  path: /.well-known/agent.json
+  status: 404
+- host: https://api.praxispro.ai
+  path: /.well-known/security.txt
+  status: 404
+- host: https://api.praxispro.ai
+  path: /.well-known/agent-card.json
+  status: 404
+summary:
+  paths_probed: 17
+  real_documents: 0
+  soft_200_spa_shells: 3
+security_txt:
+  served: false
+  note: >-
+    No /.well-known/security.txt on any host. PraxisPro does publish a responsible-disclosure
+    statement and a security@praxispro.ai contact as HTML at https://www.praxispro.ai/security —
+    captured in security/praxispro-ai-vulnerability-disclosure.yml — but not in RFC 9116 form.
